@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>I3P Demo</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+        <link href="styles/default.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="game.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header class="centered-text">
+            <h1 class="pagehead">Infinite 3-Card Poker</h1>
+            <nav>
+                <a href="index.html" class="links">Home Page</a>
+                ||
+                <a href="game.html" class="links">Play Game</a>
+                ||
+                <a href="rules.html" class="links">Odds & Rules</a>
+            </nav>
+        </header>
+        <main id="game_main">
+
+            <div></div>
+            <!-- GAME CONTAINER HERE -->
+            <div id="game_window">
+                <div id="display">
+                    <div class="centered-text" id="stack">$</div>
+                    <div class="centered-text"id="stack_change"></div>
+                    <div class="centered-text"id="hand_count">#0</div>
+                </div>
+                <div id="board">
+                    <div class="card_grid">
+                        <div></div>
+                        <div class="centered-text game_header">House</div>
+                        <div></div>
+
+                        <div class="center_content">
+                            <div class="card centered-text flipped_card" id="house_c1">X</div>
+                        </div>
+                        <div class="center_content">
+                            <div class="card centered-text flipped_card" id="house_c2">X</div>
+                        </div>
+                        <div class="center_content">
+                            <div class="card centered-text flipped_card" id="house_c3">X</div>
+                        </div>
+
+                        <div></div>
+                        <div class="centered-text game_header">Player</div>
+                        <div></div>
+
+                        <div class="center_content">
+                            <div class="card centered-text flipped_card" id="user_c1">X</div>
+                        </div>
+                        <div class="center_content">
+                            <div class="card centered-text flipped_card" id="user_c2">X</div>
+                        </div>
+                        <div class="center_content">
+                            <div class="card centered-text flipped_card" id="user_c3">X</div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="whitespace" id="comparator">?</div>-->
+
+                <!--<div id="user_hand_type"></div>
+                <div id="house_hand_type"></div>-->
+                <div id="betting_display">
+                    <div class="centered-text" id="ante_amount">Ante: $2</div>
+                    <div class="centered-text" id="pair_plus_amount">Pair +: $2</div>
+                </div>
+                <div id="controls">
+                    <div class="control_div">
+                        <div></div>
+                        <div class="button centered-text" id="play_ante">Ante</div>
+                        <div></div>
+                    </div>
+                    <div class="control_div">
+                        <div></div>
+                        <div class="button centered-text" id="play">Play</div>
+                        <div></div>
+                    </div>
+                    <div class="control_div">
+                        <div></div>
+                        <div class="button centered-text" id="fold">Fold</div>
+                        <div></div>
+                    </div>
+                    <div class="control_div">
+                        <div></div>
+                        <div class="button centered-text" id="reset">New Hand</div>
+                        <div></div>
+                    </div>
+                    <div class="control_div" id="ante">
+                        <div class="centered-text small_button" id="add_ante">+</div>
+                        <div class="centered-text" id="ante_label">Ante</div>
+                        <div class="centered-text small_button" id="minus_ante">-</div>
+                    </div>
+                    <div class="control_div" id="pair_plus">
+                        <div class="centered-text small_button" id="add_pair_plus">+</div>
+                        <div class="centered-text" id="pair_plus_label">Pair+</div>
+                        <div class="centered-text small_button" id="minus_pair_plus">-</div>
+                    </div>
+                </div>
+            </div>
+            <!-- END GAME CONTAINER -->
+            <div></div>
+
+        </main>
+        <footer class="centered-text">
+            <!--<h3 class="pagehead">Brad King 2026</h3>-->
+        </footer>
+    </body>
+</html>
