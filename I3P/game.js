@@ -1,3 +1,9 @@
+/*
+ *
+ *      Infinite 3-Card Poker Demo
+ *
+ */
+
 //Global Variables
 
 var user_hand = undefined;
@@ -468,6 +474,13 @@ $(document).ready(function() {
                 $("#stack_change").addClass('yellow_text');
                 $('#stack_change').text(difference);
             }
+            if (is_user_winner()) {
+                $("#user_indicator").addClass('winner');
+                $('#house_indicator').addClass('loser');
+            } else {
+                $("#user_indicator").addClass('loser');
+                $('#house_indicator').addClass('winner');
+            }
             $("#stack").text("$" + stack);
             $("#house_hand_type").text(house_hand_string);
             $("#house_c1").removeClass('flipped_card');
@@ -501,6 +514,8 @@ $(document).ready(function() {
             game_state = 0;
             $("#stack_change").text("");
             $("#stack_change").removeClass("green_text red_text yellow_text");
+            $("#user_indicator").removeClass('winner loser');
+            $('#house_indicator').removeClass('winner loser');
             new_hand();
         }
     });

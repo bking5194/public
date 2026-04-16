@@ -300,3 +300,15 @@ button {
 .yellow_text {
     color: rgb(254, 255, 168);
 }
+
+.winner {
+    background-color: lime;
+    color: black;
+    border-radius: 10px;
+}
+
+.loser {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
