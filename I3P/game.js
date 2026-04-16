@@ -22,7 +22,7 @@ const flush_trips_pay = 37;
 //Helper Functions
 //
 
-//Randomize 3 cards
+//Randomize 3 cards, return array of cards
 function deal_hand() {
     r1 = Math.floor(Math.random() * 13);
     r2 = Math.floor(Math.random() * 13);
@@ -37,7 +37,7 @@ function deal_hand() {
     return result;
 }
 
-//get rank for display
+//Return rank as a string
 function parse_card_rank(card) {
     rank = card[0];
     parsed_rank = undefined;
@@ -72,6 +72,8 @@ function parse_card_rank(card) {
 }
 
 //Render cards in webpage
+//REMOVED RENDERING OF RANK
+//HANDLED DIRECTLY BY EVENT HANDLERS
 function render_card(card, card_name, hide) {
     //r = parse_card_rank(card);
     s = card[1];
@@ -155,7 +157,7 @@ function new_hand() {
 
 }
 
-//Return true if user hand the better hand
+//Return true if user had the better hand or tied
 function is_user_winner() {
     user_result = get_hand_data(user_hand);
     house_result = get_hand_data(house_hand);
@@ -180,7 +182,7 @@ function house_qualified() {
     }
 }
 
-//Pay user and update UI
+//Pay user ante and pair+
 function payout() {
     user_result = get_hand_data(user_hand);
     house_qualiifies = house_qualified();
@@ -224,6 +226,8 @@ function payout() {
 //Hand Data Functions
 //
 
+//Return an array
+// [hand type, active card, error msg]
 function get_hand_data(hand) {
     error_check = 0;
     error_msg = "";
@@ -278,6 +282,7 @@ function get_hand_data(hand) {
     return [hand_type, active_card_rank, error_msg];
 }
 
+//Return true if hand is high card
 function is_highcard(hand) {
     if (hand[0][0] == hand[1][0] || hand[1][0] == hand[2][0] || hand[2][0] == hand[0][0]) {
         return false; //Ranks Match
@@ -290,6 +295,7 @@ function is_highcard(hand) {
     }
 }
 
+//Return true if hand is pair (no flush pair)
 function is_pair(hand) {
     if (hand[0][0] == hand[1][0] && hand[1][0] == hand[2][0]) {
         return false; //Trips
@@ -302,6 +308,7 @@ function is_pair(hand) {
     }
 }
 
+//Return true if hand is flush (no flush pair, straight flush, etc)
 function is_flush(hand) {
     if (hand[0][0] == hand[1][0] || hand[1][0] == hand[2][0] || hand[2][0] == hand[0][0]) {
         return false; // Pair or Trips
@@ -314,6 +321,7 @@ function is_flush(hand) {
     }
 }
 
+//Return true if hand is straight (no straight flush)
 function is_straight(hand) {
     if (hand[0][0] == hand[1][0] || hand[1][0] == hand[2][0] || hand[2][0] == hand[0][0]) {
         return false; //Pair or Trips
@@ -326,6 +334,7 @@ function is_straight(hand) {
     }
 }
 
+//Return true if hand is flush pair
 function is_flush_pair(hand) {
     if (hand[0][0] == hand[1][0] && hand[1][0] == hand[2][0]) {
         return false; //Trips
@@ -336,6 +345,7 @@ function is_flush_pair(hand) {
     }
 }
 
+//Return true if hand is trips (not flush trips)
 function is_trips(hand) {
     if (hand[0][0] == hand[1][0] && hand[1][0] == hand[2][0] && !(hand[0][1] == hand[1][1] && hand[0][1] == hand[2][1])) {
         return true; 
@@ -344,6 +354,7 @@ function is_trips(hand) {
     }
 }
 
+//Return true if hand is straight flush
 function is_straight_flush(hand) {
     if (hand[0][0] == hand[1][0] || hand[1][0] == hand[2][0] || hand[2][0] == hand[0][0]) {
         return false; //Pair or Trips
@@ -354,6 +365,7 @@ function is_straight_flush(hand) {
     }
 }
 
+//Return true if hand is flush trips
 function is_flush_trips(hand) {
     if (hand[0][0] == hand[1][0] && hand[1][0] == hand[2][0] && (hand[0][1] == hand[1][1] && hand[0][1] == hand[2][1])) {
         return true;
@@ -368,6 +380,7 @@ function is_flush_trips(hand) {
 
 $(document).ready(function() {
     // Load Page
+    // SHOULD REPLACE THIS WHOLE STARTING SEQUENCE QITH new-hand()!!!!!!!!!!!!!
     game_state = 0;
 
     //Deal Cards
