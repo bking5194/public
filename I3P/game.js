@@ -199,7 +199,8 @@ function payout() {
     if (!house_qualiifies && pair_plus == 0) {
         stack += ((2 * ante) + (ante / 2));
     } else if (!house_qualiifies && pair_plus > 0) {
-        stack += (3 * ante);
+        //stack += (3 * ante);
+        stack += ((2 * ante) + (ante / 2));
     } else if (house_qualiifies && won) {
         stack += (4 * ante);
     }
