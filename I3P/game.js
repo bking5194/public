@@ -196,11 +196,12 @@ function payout() {
     won = is_user_winner();
 
     //ante & play payout
+    //CONSOLIDATE FIRST TWO CONDITIONS!!!!
+    //PAIR PLUS NOT TO BE CONSIDERED!!!!!!!
     if (!house_qualiifies && pair_plus == 0) {
         stack += ((3 * ante) - (ante / 4));
     } else if (!house_qualiifies && pair_plus > 0) {
-        //stack += (3 * ante);
-        stack += (3 * ante);
+        stack += ((3 * ante) - (ante / 4));
     } else if (house_qualiifies && won) {
         stack += (4 * ante + (ante / 4));
     }
@@ -387,7 +388,7 @@ function is_flush_trips(hand) {
 
 $(document).ready(function() {
     // Load Page
-    // SHOULD REPLACE THIS WHOLE STARTING SEQUENCE QITH new-hand()!!!!!!!!!!!!!
+    // SHOULD REPLACE THIS WHOLE STARTING SEQUENCE WITH new-hand()!!!!!!!!!!!!!
     game_state = 0;
 
     //Deal Cards
