@@ -198,12 +198,10 @@ function payout() {
     //ante & play payout
     //CONSOLIDATE FIRST TWO CONDITIONS!!!!
     //PAIR PLUS NOT TO BE CONSIDERED!!!!!!!
-    if (!house_qualiifies && pair_plus == 0) {
-        stack += ((3 * ante) - (ante / 4));
-    } else if (!house_qualiifies && pair_plus > 0) {
-        stack += ((3 * ante) - (ante / 4));
+    if (!house_qualiifies) {
+        stack += ((3 * ante) - (ante / 2));
     } else if (house_qualiifies && won) {
-        stack += (4 * ante + (ante / 4));
+        stack += (4 * ante + (ante / 2));
     }
     
     //pair plus payout

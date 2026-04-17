@@ -164,12 +164,14 @@ button {
     font-family: Lobster;
     margin-right: 10px;
     margin-left: 10px;
+    user-select: none;
 }
 
 #pair_plus_label {
     font-family: Lobster;
     margin-right: 10px;
     margin-left: 10px;
+    user-select: none;
 }
 
 /*
@@ -206,6 +208,7 @@ button {
     padding: 10px;
     font-family: "Lobster";
     font-size: 20px;
+    user-select: none;
 }
 
 .button:hover {
@@ -225,6 +228,7 @@ button {
     width: 30%;
     font-family: "Lobster";
     font-size: 20px;
+    user-select: none;
 }
 
 .small_button:hover {
@@ -244,6 +248,7 @@ button {
     font-size: 48px;
     font-family: "Lobster";
     border-radius: 10px;
+    user-select: none;
 }
 
 .spade {
