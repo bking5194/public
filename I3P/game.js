@@ -9,7 +9,7 @@
 var user_hand = undefined;
 var house_hand = undefined;
 var stack = 640; //640 = 10 stacks of gold nuggets
-var ante = 2;
+var ante = 4;
 var pair_plus = 0;
 var hand_counter = 0;
 var stack_snapshot = stack;
@@ -197,12 +197,12 @@ function payout() {
 
     //ante & play payout
     if (!house_qualiifies && pair_plus == 0) {
-        stack += ((2 * ante) + (ante / 2));
+        stack += ((3 * ante) - (ante / 4));
     } else if (!house_qualiifies && pair_plus > 0) {
         //stack += (3 * ante);
         stack += ((2 * ante) + (ante / 2));
     } else if (house_qualiifies && won) {
-        stack += (4 * ante);
+        stack += (4 * ante + (ante / 4));
     }
     
     //pair plus payout
@@ -525,7 +525,7 @@ $(document).ready(function() {
     $('#add_ante').click(function(evt) {
         if (!($('#add_ante').hasClass('disabled'))) {
             if (ante < 64) {
-                ante += 2;
+                ante += 4;
                 $('#ante_amount').text("$" + ante + " Ante");
             }
         }
@@ -534,8 +534,8 @@ $(document).ready(function() {
     //-Ante
     $('#minus_ante').click(function(evt) {
          if (!($('#minus_ante').hasClass('disabled'))) {
-            if (ante > 2) {
-                ante -= 2;
+            if (ante > 4) {
+                ante -= 4;
                 $('#ante_amount').text("$" + ante + " Ante");
             }
          }
@@ -545,7 +545,7 @@ $(document).ready(function() {
     $('#add_pair_plus').click(function(evt) {
         if (!($('#add_pair_plus').hasClass('disabled'))) {
             if (pair_plus < 64) {
-                pair_plus += 2;
+                pair_plus += 4;
                 $('#pair_plus_amount').text("$" + pair_plus + " Pair+");
             }
         }
@@ -555,7 +555,7 @@ $(document).ready(function() {
     $('#minus_pair_plus').click(function(evt) {
         if (!($('#minus_pair_plus').hasClass('disabled'))) {
             if (pair_plus > 0) {
-                pair_plus -= 2;
+                pair_plus -= 4;
                 $('#pair_plus_amount').text("$" + pair_plus + " Pair+");
             }
         }
