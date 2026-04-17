@@ -200,7 +200,7 @@ function payout() {
         stack += ((3 * ante) - (ante / 4));
     } else if (!house_qualiifies && pair_plus > 0) {
         //stack += (3 * ante);
-        stack += ((2 * ante) + (ante / 2));
+        stack += (3 * ante);
     } else if (house_qualiifies && won) {
         stack += (4 * ante + (ante / 4));
     }
