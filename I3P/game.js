@@ -412,8 +412,8 @@ $(document).ready(function() {
     $('#fold').addClass('disabled');
     //$('#reset').addClass('disabled');
     $("#stack").text("$" + stack);
-    $('#ante_amount').text("$" + ante + " Ante");
-    $('#pair_plus_amount').text("$" + pair_plus + " Pair+");
+    $('#ante_amount').text("$" + ante + " Ante Bet");
+    $('#pair_plus_amount').text("$" + pair_plus + " Pair+ Bet");
     $('.small_button').removeClass('disabled');
 
 
@@ -526,7 +526,7 @@ $(document).ready(function() {
         if (!($('#add_ante').hasClass('disabled'))) {
             if (ante < 64) {
                 ante += 4;
-                $('#ante_amount').text("$" + ante + " Ante");
+                $('#ante_amount').text("$" + ante + " Ante Bet");
             }
         }
     });
@@ -536,7 +536,7 @@ $(document).ready(function() {
          if (!($('#minus_ante').hasClass('disabled'))) {
             if (ante > 4) {
                 ante -= 4;
-                $('#ante_amount').text("$" + ante + " Ante");
+                $('#ante_amount').text("$" + ante + " Ante Bet");
             }
          }
     });
@@ -546,7 +546,7 @@ $(document).ready(function() {
         if (!($('#add_pair_plus').hasClass('disabled'))) {
             if (pair_plus < 64) {
                 pair_plus += 4;
-                $('#pair_plus_amount').text("$" + pair_plus + " Pair+");
+                $('#pair_plus_amount').text("$" + pair_plus + " Pair+ Bet");
             }
         }
     });
@@ -556,7 +556,7 @@ $(document).ready(function() {
         if (!($('#minus_pair_plus').hasClass('disabled'))) {
             if (pair_plus > 0) {
                 pair_plus -= 4;
-                $('#pair_plus_amount').text("$" + pair_plus + " Pair+");
+                $('#pair_plus_amount').text("$" + pair_plus + " Pair+ Bet");
             }
         }
     });
