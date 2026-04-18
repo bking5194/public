@@ -198,9 +198,9 @@ function payout() {
     //ante & play payout
     //STILL WIP OMG FIGURE IT OUT NERD
     if (!house_qualiifies) {
-        stack += ((2 * ante) + (ante / 2)); // Ante pays 1:1, Play pays 2:1
+        stack += ((2 * ante) + (ante / 2)); // Ante pays 2:1, Return Play bet
     } else if (house_qualiifies && won) {
-        stack += (4 * ante); // Ante pays 1:1, Play pays 1:1
+        stack += ((3 * ante) + (ante / 2)); // Ante pays 2:1, Play pays 1:1
     }
     
     //pair plus payout
