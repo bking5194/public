@@ -19,10 +19,10 @@ const to_qualify = 11; // King
 const pair_pay = 2;
 const flush_pay = 4;
 const straight_pay = 5;
-const flush_pair_pay = 7;
-const trips_pay = 13;
-const straight_flush_pay = 17;
-const flush_trips_pay = 37;
+const flush_pair_pay = 6;
+const trips_pay = 11;
+const straight_flush_pay = 16;
+const flush_trips_pay = 36;
 
 //
 //Helper Functions
@@ -196,12 +196,11 @@ function payout() {
     won = is_user_winner();
 
     //ante & play payout
-    //CONSOLIDATE FIRST TWO CONDITIONS!!!!
-    //PAIR PLUS NOT TO BE CONSIDERED!!!!!!!
+    //STILL WIP OMG FIGURE IT OUT NERD
     if (!house_qualiifies) {
-        stack += ((3 * ante) - (ante / 2));
+        stack += ((2 * ante) + (ante / 2)); // Ante pays 1:1, Play pays 2:1
     } else if (house_qualiifies && won) {
-        stack += (4 * ante + (ante / 2));
+        stack += (4 * ante); // Ante pays 1:1, Play pays 1:1
     }
     
     //pair plus payout
