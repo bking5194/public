@@ -20,8 +20,8 @@ const pair_pay = 2;
 const flush_pay = 4;
 const straight_pay = 5;
 const flush_pair_pay = 6;
-const trips_pay = 11;
-const straight_flush_pay = 16;
+const trips_pay = 10;
+const straight_flush_pay = 13;
 const flush_trips_pay = 21;
 
 //
