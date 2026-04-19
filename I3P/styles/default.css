@@ -12,6 +12,18 @@ main {
     background-color: rgb(192, 129, 255);
     border: 4px solid black;
     margin: 20px;
+    padding-top: 20px;
+}
+
+p {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+li {
+    margin: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 table {
@@ -19,9 +31,11 @@ table {
     margin: 0 auto;
 }
 
+/*
 tbody tr:nth-child(even) td {
     background-color: #FFFFFF;
 }
+    */
 
 td {
     background-color: rgb(226, 203, 250);
@@ -57,7 +71,7 @@ td {
 }
 
 .whitespace {
-    padding: 40px;
+    padding: 10px;
 }
 
 .center_content {
@@ -81,4 +95,19 @@ td {
 #version {
     font-family: "Lobster";
     padding: 3px;
+}
+
+.great {
+    background-color: #64ff71;
+    padding: 10px;
+}
+
+.good {
+    background-color: #befbc3;
+    padding: 10px;
+}
+
+.bad {
+    background-color: rgb(253, 150, 150);
+    padding: 10px;
 }
