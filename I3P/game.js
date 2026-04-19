@@ -141,7 +141,7 @@ function new_hand() {
     $('#play').addClass('disabled');
     $('#fold').addClass('disabled');
     //$('#reset').addClass('disabled');
-    $("#stack").text("$" + stack + " (" + Math.floor(stack / 64) + "S+" + (stack % 64) + ")");
+    $("#stack").text("$" + stack);
     //$('#comparator').text('?');
     $('.small_button').removeClass('disabled');
 
@@ -409,7 +409,8 @@ $(document).ready(function() {
     $('#play').addClass('disabled');
     $('#fold').addClass('disabled');
     //$('#reset').addClass('disabled');
-    $("#stack").text("$" + stack + " (" + Math.floor(stack / 64) + "S+" + (stack % 64) + ")");
+    //$("#stack").text("$" + stack + " (" + Math.floor(stack / 64) + "S+" + (stack % 64) + ")");
+    $("#stack").text("$" + stack);
     $('#ante_amount').text("$" + ante + " Ante Bet");
     $('#pair_plus_amount').text("$" + pair_plus + " Pair+ Bet");
     $('.small_button').removeClass('disabled');
@@ -436,7 +437,7 @@ $(document).ready(function() {
             game_state = 1;
             hand_counter++;
             stack += -(ante + pair_plus);
-            $("#stack").text("$" + stack + " (" + Math.floor(stack / 64) + "S+" + (stack % 64) + ")");
+            $("#stack").text("$" + stack);
             $("#hand_count").text("#" + hand_counter);
             $("#stack_change").removeClass("green_text red_text yellow_text");
             $("#stack_change").text("");
@@ -480,7 +481,7 @@ $(document).ready(function() {
                 $("#user_indicator").addClass('loser');
                 $('#house_indicator').addClass('winner');
             }
-            $("#stack").text("$" + stack + " (" + Math.floor(stack / 64) + "S+" + (stack % 64) + ")");
+            $("#stack").text("$" + stack);
             $("#house_hand_type").text(house_hand_string);
             $("#house_c1").removeClass('flipped_card');
             $("#house_c2").removeClass('flipped_card');
