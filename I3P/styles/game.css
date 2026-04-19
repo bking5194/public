@@ -1,0 +1,331 @@
+html {
+    background-color: rgb(66, 13, 118);
+}
+
+body {
+    color: #030425;
+    font-family: Arial, Helvetica;
+    margin: 0px 0px 0px 0px;
+}
+
+td {
+    text-align: center;
+    font-weight: bold;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.pagehead {
+    color: rgb(254, 255, 168);
+    font-family: "Lobster";
+}
+
+.game_header {
+    font-family: "Lobster";
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(254, 255, 168);
+}
+
+.links {
+    font-family: "Lobster";
+    color: rgb(254, 255, 168);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+.whitespace {
+    padding: 40px;
+}
+
+.center_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#comparator {
+    font-size: 64px;
+}
+
+#game_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#game_window {
+    /*
+    height: 320px;
+    width: 100%;
+    margin: 30px;
+    */
+    margin-top: 30px;
+    padding: 10px;
+    background-color: rgb(192, 129, 255);
+    border: 8px black solid;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+}
+
+#controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#display {
+    /* height: 32px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:rgb(254, 255, 168);
+    background-color: black;
+    border-radius: 10px;
+    font-family: "Lobster";
+    font-size: 20px;
+}
+
+#betting_display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:rgb(254, 255, 168);
+    background-color: black;
+    border-radius: 10px;
+    font-family: "Lobster";
+    font-size: 20px;
+}
+
+
+#ante {
+    margin-top: 10px;
+}
+
+#pair_plus {
+    margin-top: 10px;
+}
+
+#ante_label {
+    font-family: Lobster;
+    margin-right: 10px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+#pair_plus_label {
+    font-family: Lobster;
+    margin-right: 10px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+/*
+#play {
+    height: 48px;
+}
+
+#fold {
+    height: 48px;
+}
+    */
+
+.control_div {
+    /*
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background-color: rgb(66, 13, 118);
+    border: 1px solid rgb(66, 13, 118);
+    color: rgb(254, 255, 168);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 60%;
+    padding: 10px;
+    font-family: "Lobster";
+    font-size: 20px;
+    user-select: none;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+.small_button {
+    background-color: rgb(66, 13, 118);
+    border: 1px solid rgb(66, 13, 118);
+    color: rgb(254, 255, 168);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 30%;
+    font-family: "Lobster";
+    font-size: 20px;
+    user-select: none;
+}
+
+.small_button:hover {
+    background-color: black;
+}
+
+.card_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    margin: 20px;
+    height: 60%;
+    width: 54px;
+    border: 10px white solid;
+    font-size: 48px;
+    font-family: "Lobster";
+    border-radius: 10px;
+    user-select: none;
+}
+
+.spade {
+    background-color: white;
+    color: black;
+    border: 10px black solid;
+}
+
+.heart {
+    background-color: white;
+    color: red;
+    border: 10px red solid;
+}
+
+.club {
+    background-color: red;
+    color: white;
+    border: 10px white solid;
+}
+
+.diamond {
+    background-color: black;
+    color: white;
+    border: 10px white solid;
+}
+
+.small_card {
+    margin: 5px;
+    padding: 5px;
+    height: 60%;
+    width: 32px;
+    border: 10px white solid;
+    font-size: 32px;
+    font-family: "Lobster";
+    border-radius: 10px;
+    user-select: none;
+    border: 6px;
+}
+
+.small_spade {
+    background-color: white;
+    color: black;
+    border: 6px black solid;
+}
+
+.small_heart {
+    background-color: white;
+    color: red;
+    border: 6px red solid;
+}
+
+.small_club {
+    background-color: red;
+    color: white;
+    border: 6px white solid;
+}
+
+.small_diamond {
+    background-color: black;
+    color: white;
+    border: 6px white solid;
+}
+
+.flipped_card {
+    margin: 20px;
+    height: 60%;
+    width: 54px;
+    border: 10px rgb(254, 255, 168) solid;
+    background-color: rgb(44, 1, 87);
+    color: rgba(0, 0, 0, 0);
+}
+
+.disabled {
+    background-color: rgb(192, 129, 255);
+    color: rgb(66, 13, 118);
+}
+
+.disabled:hover {
+    background-color: rgb(192, 129, 255);
+    color: rgb(66, 13, 118);
+}
+
+.green_text {
+    color: lime;
+}
+
+.red_text {
+    color: red;
+}
+
+.yellow_text {
+    color: rgb(254, 255, 168);
+}
+
+.winner {
+    background-color: lime;
+    color: black;
+    border-radius: 10px;
+}
+
+.loser {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+#version {
+    font-family: "Lobster";
+    padding: 3px;
+}

@@ -8,23 +8,15 @@ body {
     margin: 0px 0px 0px 0px;
 }
 
+main {
+    background-color: rgb(192, 129, 255);
+    border: 4px solid black;
+    margin: 20px;
+}
+
 table {
-    background-color: #c2cbe9;
-    border: 2px #042c5a solid;
+    background-color: rgb(192, 129, 255);
     margin: 0 auto;
-}
-
-select {
-    background-color: #c2cbe9;
-    border: 2px #042c5a solid;
-    margin: 0 auto;
-}
-
-input {
-    background-color: #c2cbe9;
-    border: 2px #042c5a solid;
-    margin: 0 auto;
-    text-align: right;
 }
 
 tbody tr:nth-child(even) td {
@@ -32,18 +24,8 @@ tbody tr:nth-child(even) td {
 }
 
 td {
-    background-color: #e8eff8;
+    background-color: rgb(226, 203, 250);
     border: 1px #042c5a solid;
-}
-
-figcaption {
-    font-style: italic;
-    font-size: 10pt;
-}
-
-button {
-    background-color: #042c5a;
-    color: #fafd4e;
 }
 
 .centered-text {
@@ -59,14 +41,13 @@ button {
     font-family: "Lobster";
 }
 
-.game_header {
-    font-family: "Lobster";
-    font-size: 24px;
-}
-
 .links {
     font-family: "Lobster";
     color: rgb(254, 255, 168);
+}
+
+.links:hover {
+    color: white;
 }
 
 .grid-container {
@@ -85,215 +66,6 @@ button {
     justify-content: center;
 }
 
-#comparator {
-    font-size: 64px;
-}
-
-#game_main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-#game_window {
-    /*
-    height: 320px;
-    width: 100%;
-    margin: 30px;
-    */
-    margin-top: 30px;
-    padding: 10px;
-    background-color: rgb(192, 129, 255);
-    border: 8px black solid;
-    display: grid;
-    grid-template-columns: 1fr;
-    border-radius: 10px;
-}
-
-#board {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0;
-}
-
-#controls {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#display {
-    /* height: 32px; */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color:rgb(254, 255, 168);
-    background-color: black;
-    border-radius: 10px;
-    font-family: "Lobster";
-    font-size: 20px;
-}
-
-#betting_display {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color:rgb(254, 255, 168);
-    background-color: black;
-    border-radius: 10px;
-    font-family: "Lobster";
-    font-size: 20px;
-}
-
-
-#ante {
-    margin-top: 10px;
-}
-
-#pair_plus {
-    margin-top: 10px;
-}
-
-#ante_label {
-    font-family: Lobster;
-    margin-right: 10px;
-    margin-left: 10px;
-    user-select: none;
-}
-
-#pair_plus_label {
-    font-family: Lobster;
-    margin-right: 10px;
-    margin-left: 10px;
-    user-select: none;
-}
-
-/*
-#play {
-    height: 48px;
-}
-
-#fold {
-    height: 48px;
-}
-    */
-
-.control_div {
-    /*
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button {
-    background-color: rgb(66, 13, 118);
-    border: 1px solid rgb(66, 13, 118);
-    color: rgb(254, 255, 168);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 60%;
-    padding: 10px;
-    font-family: "Lobster";
-    font-size: 20px;
-    user-select: none;
-}
-
-.button:hover {
-    background-color: black;
-}
-
-.small_button {
-    background-color: rgb(66, 13, 118);
-    border: 1px solid rgb(66, 13, 118);
-    color: rgb(254, 255, 168);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 30%;
-    font-family: "Lobster";
-    font-size: 20px;
-    user-select: none;
-}
-
-.small_button:hover {
-    background-color: #165aa8;
-}
-
-.card_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.card {
-    margin: 20px;
-    height: 60%;
-    width: 54px;
-    border: 8px white solid;
-    font-size: 48px;
-    font-family: "Lobster";
-    border-radius: 10px;
-    user-select: none;
-}
-
-.spade {
-    background-color: white;
-    color: black;
-    border: 10px black solid;
-}
-
-.heart {
-    background-color: white;
-    color: red;
-    border: 10px red solid;
-}
-
-.club {
-    background-color: red;
-    color: white;
-    border: 10px white solid;
-}
-
-.diamond {
-    background-color: black;
-    color: white;
-    border: 10px white solid;
-}
-
-.flipped_card {
-    margin: 20px;
-    height: 60%;
-    width: 54px;
-    border: 10px rgb(254, 255, 168) solid;
-    background-color: rgb(44, 1, 87);
-    color: rgba(0, 0, 0, 0);
-}
-
-.disabled {
-    background-color: rgb(192, 129, 255);
-    color: rgb(66, 13, 118);
-}
-
-.disabled:hover {
-    background-color: rgb(192, 129, 255);
-    color: rgb(66, 13, 118);
-}
-
 .green_text {
     color: lime;
 }
@@ -304,18 +76,6 @@ button {
 
 .yellow_text {
     color: rgb(254, 255, 168);
-}
-
-.winner {
-    background-color: lime;
-    color: black;
-    border-radius: 10px;
-}
-
-.loser {
-    background-color: red;
-    color: white;
-    border-radius: 10px;
 }
 
 #version {
